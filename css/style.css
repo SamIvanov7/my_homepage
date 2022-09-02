@@ -122,6 +122,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .fh5co-tab-wrap {
   position: relative;
+  top: 20px;
 }
 .fh5co-tab-wrap .fh5co-tab-menu {
   list-style: none;
@@ -152,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255, 255, 255, 0.5);
   z-index: 10;
   display: -moz-inline-stack;
-  display: inline-block;
+  display: inline-flex;
   zoom: 1;
   *display: inline;
   -webkit-transition: 3s;

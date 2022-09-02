@@ -32,7 +32,7 @@ body {
   color: #7f7f7f;
   color: rgba(255, 255, 255, 0.7);
   background-color: var(--dark);
-  overflow: hidden;
+  overflow: scroll;
   position: relative;
   background-size: cover;
   background-attachment: fixed;

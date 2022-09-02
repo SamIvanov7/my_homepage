@@ -1,9 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -11,28 +5,21 @@
   font-weight: normal;
   font-style: normal;
 }
-
-@font-face {
-	font-family: raleway_m;
-	src: url(../fonts/raleway-v22-cyrillic-300.woff2);
-	font-weight: 300;
-}
-@font-face {
-	font-family: raleway_m;
-	src: url(../fonts/raleway-v22-cyrillic-900.woff2);
-	font-weight: 900;
-}
-
+/* =======================================================
+*
+* 	Template Style 
+*	Edit this section
+*
+* ======================================================= */
 body {
-  font-family: raleway_m, Arial, sans-serif;
-	width: 100%;
-	height: 100%;
-	font-size: 20px;
-  line-height: 1.8;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.5;
   color: #7f7f7f;
   color: rgba(255, 255, 255, 0.7);
-  background-color: var(--dark);
-  overflow: scroll;
+  background: #fff;
+  height: 100%;
   position: relative;
   background-size: cover;
   background-attachment: fixed;
@@ -45,36 +32,31 @@ body {
   }
 }
 
-:root {
-	--dark: #070707;
-	--sizeindex: calc(1vw + 1vh);
-	--transition: .75s cubic-bezier(.2, .6, 0, 1);
-}
 a {
   color: #17e7a4;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #eaf7f3;
+  color: #17e7a4;
   outline: none;
 }
 
 p {
-  margin-bottom: 1.8em;
+  margin-bottom: 1.5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: rgb(108, 213, 255);
+  color: #fff;
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 30px 0;
 }
 
 ::-webkit-selection {
-  color: rgb(226, 111, 255);
-  background: #ea6df5;
+  color: #fff;
+  background: #17e7a4;
 }
 
 ::-moz-selection {
@@ -87,55 +69,42 @@ h1, h2, h3, h4, h5, h6 {
   background: #17e7a4;
 }
 
-
-.intro {
-	position: fixed;
-	top: -46px;
-	left: 0px;
-	bottom: 0px;
-	right: 0px;
-	z-index: -100;
-	width: 1400px;
-	height: 720px;
-}
-
 #fh5co-main {
-  margin: 1em auto 1em auto;
+  max-width: 760px;
+  min-height: 600px;
+  margin: 5em auto 5em auto;
   position: relative;
-  background: rgba(0, 14, 14, 0.85);
-	width: 60%;
-	height: device-height;
+  background: rgba(0, 0, 0, 0.85);
   overflow: hidden;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   border-radius: 7px;
-  -webkit-transition: 2s;
-  -o-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 @media screen and (max-width: 768px) {
   #fh5co-main {
-    margin: 5em .5em 5em .5em;
+    margin: 2em .5em 5em .5em;
   }
 }
 
 .fh5co-tab-wrap {
   position: relative;
-  top: 20px;
 }
 .fh5co-tab-wrap .fh5co-tab-menu {
   list-style: none;
   text-align: center;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
   position: relative;
-  top: -0.1em;
+  top: -.5em;
   padding: 0;
   margin: 0;
 }
 @media screen and (max-width: 768px) {
   .fh5co-tab-wrap .fh5co-tab-menu {
-    top: -1px;
+    top: -7px;
   }
 }
 .fh5co-tab-wrap .fh5co-tab-menu li {
@@ -153,12 +122,12 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255, 255, 255, 0.5);
   z-index: 10;
   display: -moz-inline-stack;
-  display: inline-flex;
+  display: inline-block;
   zoom: 1;
   *display: inline;
-  -webkit-transition: 3s;
-  -o-transition: 3s;
-  transition: 3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .fh5co-tab-wrap .fh5co-tab-menu li a .icon {
   display: block;
@@ -188,32 +157,32 @@ h1, h2, h3, h4, h5, h6 {
 .fh5co-tab-wrap .fh5co-tab-menu li a:after {
   position: absolute;
   content: "";
-  background: #2cdabd;
-  z-index: -10;
+  height: 0;
+  background: #17e7a4;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
-	height: 150;
-  -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -moz-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -ms-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -o-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
-  border-radius: 200px;
+  border-radius: 7px;
 }
 .fh5co-tab-wrap .fh5co-tab-menu li a:hover {
-  color: rgb(0, 0, 0);
+  color: #fff;
   text-decoration: none;
 }
 .fh5co-tab-wrap .fh5co-tab-menu li a:hover .icon {
   bottom: 10px;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 768px) {
   .fh5co-tab-wrap .fh5co-tab-menu li a:hover .icon {
-    bottom: 10px;
+    bottom: 0px;
   }
 }
 .fh5co-tab-wrap .fh5co-tab-menu li a:hover:after {
@@ -228,25 +197,25 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .fh5co-tab-wrap .fh5co-tab-menu li.active > a {
-  color: rgb(87, 0, 82);
+  color: #fff;
   text-decoration: none;
 }
 .fh5co-tab-wrap .fh5co-tab-menu li.active > a:after {
-  height: 90%;
+  height: 100%;
 }
 .fh5co-tab-wrap .fh5co-tab-content {
-  padding-left: 0.7em;
-  padding-right: 0.7em;
+  padding-left: 4em;
+  padding-right: 4em;
   position: absolute;
-  top: 20px;
-  opacity: 10;
+  top: 0;
+  opacity: 0;
   visibility: hidden;
   width: 100%;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 768px) {
   .fh5co-tab-wrap .fh5co-tab-content {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding-left: .5em;
+    padding-right: .5em;
   }
 }
 .fh5co-tab-wrap .fh5co-tab-content.active {
@@ -254,28 +223,28 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
 }
 .fh5co-tab-wrap .fh5co-tab-content .fh5co-content-inner {
-  padding: 5em 2em 5em 2em;
+  padding: 7em 2em 5em 2em;
   float: left;
   width: 100%;
   position: relative;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .fh5co-tab-wrap .fh5co-tab-content .fh5co-content-inner {
     padding: 4em .5em 5em .5em;
   }
 }
 
 figure {
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
 }
 
 .fh5co-counter .fh5co-number {
-  font-size: 120px;
-  color: #49fff6;
-  font-weight: 800;
+  font-size: 100px;
+  color: #17e7a4;
+  font-weight: 400;
   margin: 0;
   padding: 0;
-  line-height: 1;
+  line-height: .7;
 }
 .fh5co-counter .fh5co-number.fh5co-left {
   float: left;
@@ -284,28 +253,28 @@ figure {
 @media screen and (max-width: 768px) {
   .fh5co-counter .fh5co-number.fh5co-left {
     width: 100%;
-    line-height: 1.5;
+    line-height: 1.2;
   }
 }
 .fh5co-counter .fh5co-text {
-  float: left;
+  float: right;
   text-align: left;
   width: 70%;
 }
 @media screen and (max-width: 768px) {
   .fh5co-counter .fh5co-text {
-    width: 50%;
+    width: 100%;
     text-align: center;
   }
 }
 .fh5co-counter .fh5co-text h3 {
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: relative;
 }
 .fh5co-counter .fh5co-text h3.border-bottom:after {
   content: "";
-  width: 100px;
+  width: 50px;
 }
 
 .fh5co-social {
@@ -323,8 +292,8 @@ figure {
   *display: inline;
 }
 .fh5co-social li a {
-  font-size: 35px;
-  color: rgb(244, 251, 252);
+  font-size: 22px;
+  color: #fff;
   padding: 10px 20px;
   display: -moz-inline-stack;
   display: inline-block;
@@ -360,21 +329,21 @@ figure {
   margin-top: 5px;
 }
 .fh5co-feature .fh5co-icon i {
-  color: #26ffe2;
-  font-size: 60px;
+  color: #17e7a4;
+  font-size: 40px;
 }
 .fh5co-feature .fh5co-text {
   float: right;
-  width: 100%;
+  width: 82%;
 }
 @media screen and (max-width: 768px) {
   .fh5co-feature .fh5co-text {
-    width: 100%;
+    width: 82%;
   }
 }
 @media screen and (max-width: 480px) {
   .fh5co-feature .fh5co-text {
-    width: 100%;
+    width: 72%;
   }
 }
 .fh5co-feature .fh5co-text h2, .fh5co-feature .fh5co-text h3 {
@@ -382,7 +351,7 @@ figure {
   padding: 0;
 }
 .fh5co-feature .fh5co-text h3 {
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 10px;
   color: rgba(255, 255, 255, 0.8);
   font-size: 20px;
@@ -421,7 +390,7 @@ figure {
   margin-top: 50px;
   background: black;
   clear: both;
-  color: rgba(253, 253, 253, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   position: absolute;
   bottom: 0;
